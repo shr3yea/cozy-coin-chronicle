@@ -1,5 +1,6 @@
 import { useFinanceStore } from "@/hooks/useFinanceStore";
 import { Coins, TrendingUp, TrendingDown, Star } from "lucide-react";
+import FinancePet from "@/components/FinancePet";
 
 const Dashboard = () => {
   const { data } = useFinanceStore();
@@ -15,6 +16,8 @@ const Dashboard = () => {
           </h1>
           <p className="text-muted-foreground">Your cozy finance companion</p>
         </div>
+
+        <FinancePet />
 
         <div className="grid md:grid-cols-3 gap-4">
           <div className="cloud-card p-6 ghibli-gradient-lavender float-animation">
