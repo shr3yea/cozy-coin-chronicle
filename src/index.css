@@ -8,89 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Studio Ghibli Pastel Theme */
+    --background: 40 40% 98%;
+    --foreground: 270 30% 35%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 270 30% 35%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 270 30% 35%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Soft Lavender */
+    --primary: 270 50% 75%;
+    --primary-foreground: 270 60% 20%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Blush Pink */
+    --secondary: 340 80% 88%;
+    --secondary-foreground: 340 50% 30%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Sky Blue */
+    --accent: 200 60% 85%;
+    --accent-foreground: 200 50% 25%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 270 30% 94%;
+    --muted-foreground: 270 20% 50%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 75%;
+    --destructive-foreground: 0 50% 30%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 270 30% 90%;
+    --input: 270 30% 92%;
+    --ring: 270 50% 75%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Ghibli Gradients */
+    --gradient-lavender: linear-gradient(135deg, hsl(270 60% 90%) 0%, hsl(290 60% 92%) 100%);
+    --gradient-pink: linear-gradient(135deg, hsl(340 100% 92%) 0%, hsl(320 80% 90%) 100%);
+    --gradient-sky: linear-gradient(135deg, hsl(200 70% 88%) 0%, hsl(220 60% 90%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(340 100% 92%) 0%, hsl(270 60% 90%) 50%, hsl(200 70% 88%) 100%);
+    
+    /* Cloud Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(270 40% 85% / 0.3);
+    --shadow-float: 0 8px 30px -4px hsl(270 40% 80% / 0.4);
+    --shadow-glow: 0 0 40px hsl(270 60% 90% / 0.5);
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }
 
@@ -101,5 +66,62 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: linear-gradient(to bottom, hsl(var(--background)), hsl(270 40% 96%));
+    min-height: 100vh;
+    font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+@layer utilities {
+  .cloud-card {
+    @apply rounded-3xl bg-card shadow-[0_4px_20px_-2px_hsl(270_40%_85%_/_0.3)] transition-all duration-300;
+  }
+  
+  .cloud-card:hover {
+    @apply shadow-[0_8px_30px_-4px_hsl(270_40%_80%_/_0.4)] translate-y-[-2px];
+  }
+
+  .ghibli-gradient-lavender {
+    background: var(--gradient-lavender);
+  }
+
+  .ghibli-gradient-pink {
+    background: var(--gradient-pink);
+  }
+
+  .ghibli-gradient-sky {
+    background: var(--gradient-sky);
+  }
+
+  .ghibli-gradient-sunset {
+    background: var(--gradient-sunset);
+  }
+
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .gentle-pulse {
+    animation: gentlePulse 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes gentlePulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
   }
 }
