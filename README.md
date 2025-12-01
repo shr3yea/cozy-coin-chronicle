@@ -1,73 +1,109 @@
-# Welcome to your Lovable project
+# 🌸 Sky Coins
 
-## Project info
+A cozy Studio Ghibli-inspired finance tracking web app with gamification elements and a pixelated animal companion.
 
-**URL**: https://lovable.dev/projects/2cb415a0-e639-4e79-a6f2-74e1ba3127c3
+## ✨ Features
 
-## How can I edit this code?
+### 💰 Dashboard
+- Real-time balance tracking
+- Recent transactions overview
+- Coins, XP, and level progression
+- Mood-responsive pixelated pet companion
 
-There are several ways of editing your application.
+### 🎯 Daily Quests
+- Complete financial tasks to earn rewards
+- Gain coins and XP for tracking habits
+- Level up your financial journey
 
-**Use Lovable**
+### 🛍️ Shop
+- Purchase beautiful backgrounds
+- Unlock custom UI themes
+- Spend earned coins on customizations
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2cb415a0-e639-4e79-a6f2-74e1ba3127c3) and start prompting.
+### 📦 Inventory
+- View all unlocked items
+- Manage your customizations
+- Track your collection
 
-Changes made via Lovable will be committed automatically to this repo.
+### 💡 Money Tips
+- Curated financial advice
+- Savings strategies
+- Budgeting best practices
 
-**Use your preferred IDE**
+### 📊 Tracker
+- Add income and expenses
+- Categorize transactions
+- Monitor spending patterns
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🐾 Finance Pet
+- Pixelated animal companion
+- Mood changes based on financial health
+- Real-time feedback on money habits
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🎨 Design
 
-Follow these steps:
+Inspired by Studio Ghibli aesthetics with:
+- Soft pastel colors (lavender, blush pink, sky blue)
+- Cloud-like UI shapes with rounded corners
+- Gentle floating animations
+- Dreamy gradients and soft shadows
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js & npm installed
+
+### Installation
+
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to project directory
+cd sky-coins
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 🛠️ Tech Stack
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **React** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool
+- **Tailwind CSS** - Styling
+- **shadcn/ui** - UI components
+- **React Router** - Navigation
+- **Lucide React** - Icons
+- **Sonner** - Toast notifications
 
-**Use GitHub Codespaces**
+## 💾 Data Persistence
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+All user data is stored locally using `localStorage`:
+- Balance and transactions
+- Coins, XP, and level
+- Quest completion status
+- Inventory items
 
-## What technologies are used for this project?
+## 🎮 Gamification System
 
-This project is built with:
+- **Coins**: Earn by completing quests, spend in the shop
+- **XP**: Gain experience points for financial activities
+- **Levels**: Progress through levels (every 100 XP)
+- **Quests**: Daily challenges for better money habits
+- **Pet Mood**: Visual feedback based on financial health
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📱 Responsive Design
 
-## How can I deploy this project?
+Fully responsive across all devices with mobile-optimized navigation and layouts.
 
-Simply open [Lovable](https://lovable.dev/projects/2cb415a0-e639-4e79-a6f2-74e1ba3127c3) and click on Share -> Publish.
+## 🌟 Project URL
 
-## Can I connect a custom domain to my Lovable project?
+**Lovable Project**: https://lovable.dev/projects/2cb415a0-e639-4e79-a6f2-74e1ba3127c3
 
-Yes, you can!
+## 📄 License
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project is created with [Lovable](https://lovable.dev).
