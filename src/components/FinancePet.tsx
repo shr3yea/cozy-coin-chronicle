@@ -1,37 +1,38 @@
 import { useFinanceStore } from "@/hooks/useFinanceStore";
 import { useMemo } from "react";
+import PixelPet from "./PixelPet";
 
 type MoodState = "happy" | "excited" | "neutral" | "worried" | "sad";
 
 interface MoodConfig {
-  emoji: string;
+  petType: "bunny" | "cat" | "bear" | "dog" | "panda";
   message: string;
   color: string;
 }
 
 const moodConfigs: Record<MoodState, MoodConfig> = {
   excited: {
-    emoji: "🐰",
+    petType: "bunny",
     message: "You're doing amazing! Keep it up!",
     color: "ghibli-gradient-sky",
   },
   happy: {
-    emoji: "🐱",
+    petType: "cat",
     message: "Great financial habits!",
     color: "ghibli-gradient-lavender",
   },
   neutral: {
-    emoji: "🐻",
+    petType: "bear",
     message: "Steady as she goes!",
     color: "ghibli-gradient-pink",
   },
   worried: {
-    emoji: "🐶",
+    petType: "dog",
     message: "Let's be more mindful with spending...",
     color: "ghibli-gradient-sunset",
   },
   sad: {
-    emoji: "🐼",
+    petType: "panda",
     message: "I believe in you! Let's save together.",
     color: "bg-muted",
   },
@@ -87,15 +88,9 @@ const FinancePet = () => {
       
       <div className="flex items-center gap-4">
         <div className="relative">
-          {/* Pixel art style emoji container */}
-          <div 
-            className="text-7xl filter pixelated-pet"
-            style={{ 
-              imageRendering: "pixelated",
-              transform: "scale(1)",
-            }}
-          >
-            {config.emoji}
+          {/* Pixelated pet */}
+          <div className="p-2 rounded-2xl bg-white/30 backdrop-blur-sm">
+            <PixelPet type={config.petType} size={14} />
           </div>
           
           {/* Mood indicator dots */}
