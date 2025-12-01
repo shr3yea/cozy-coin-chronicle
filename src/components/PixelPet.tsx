@@ -12,6 +12,7 @@ const PixelPet = ({ type, size = 12 }: PixelPetProps) => {
     bunny: [
       ["t", "br", "t", "t", "t", "t", "br", "t"],
       ["t", "br", "t", "t", "t", "t", "br", "t"],
+      ["t", "br", "t", "t", "t", "t", "br", "t"],
       ["br", "br", "br", "br", "br", "br", "br", "br"],
       ["br", "pk", "bl", "br", "br", "bl", "pk", "br"],
       ["br", "br", "br", "pk", "pk", "br", "br", "br"],
@@ -19,6 +20,8 @@ const PixelPet = ({ type, size = 12 }: PixelPetProps) => {
       ["t", "br", "br", "br", "br", "br", "br", "t"],
     ],
     cat: [
+      ["t", "or", "t", "t", "t", "t", "or", "t"],
+      ["t", "or", "t", "t", "t", "t", "or", "t"],
       ["t", "or", "t", "t", "t", "t", "or", "t"],
       ["or", "or", "or", "or", "or", "or", "or", "or"],
       ["or", "wh", "bl", "or", "or", "bl", "wh", "or"],
@@ -28,6 +31,8 @@ const PixelPet = ({ type, size = 12 }: PixelPetProps) => {
       ["t", "or", "or", "or", "or", "or", "or", "t"],
     ],
     bear: [
+      ["t", "br", "t", "t", "t", "t", "br", "t"],
+      ["t", "br", "t", "t", "t", "t", "br", "t"],
       ["t", "br", "br", "t", "t", "br", "br", "t"],
       ["br", "br", "br", "br", "br", "br", "br", "br"],
       ["br", "pk", "bl", "br", "br", "bl", "pk", "br"],
@@ -37,6 +42,8 @@ const PixelPet = ({ type, size = 12 }: PixelPetProps) => {
       ["t", "br", "br", "br", "br", "br", "br", "t"],
     ],
     dog: [
+      ["t", "bn", "t", "t", "t", "t", "bn", "t"],
+      ["t", "bn", "t", "t", "t", "t", "bn", "t"],
       ["t", "bn", "bn", "t", "t", "bn", "bn", "t"],
       ["bn", "bn", "bn", "bn", "bn", "bn", "bn", "bn"],
       ["bn", "wh", "bl", "bn", "bn", "bl", "wh", "bn"],
@@ -46,6 +53,8 @@ const PixelPet = ({ type, size = 12 }: PixelPetProps) => {
       ["t", "bn", "bn", "bn", "bn", "bn", "bn", "t"],
     ],
     panda: [
+      ["t", "bk", "t", "t", "t", "t", "bk", "t"],
+      ["t", "bk", "t", "t", "t", "t", "bk", "t"],
       ["t", "bk", "bk", "t", "t", "bk", "bk", "t"],
       ["bk", "wh", "wh", "wh", "wh", "wh", "wh", "bk"],
       ["wh", "bk", "bk", "wh", "wh", "bk", "bk", "wh"],
