@@ -58,13 +58,13 @@ const PixelPet = ({ type, size = 12 }: PixelPetProps) => {
 
   const colorMap: Record<string, string> = {
     t: "transparent",
-    br: "hsl(25, 55%, 50%)", // rich brown
-    pk: "hsl(15, 75%, 65%)", // coral pink
-    bl: "hsl(20, 25%, 25%)", // dark brown
-    wh: "hsl(25, 30%, 85%)", // warm cream
-    or: "hsl(30, 70%, 55%)", // warm orange
-    bn: "hsl(30, 60%, 45%)", // terracotta
-    bk: "hsl(20, 30%, 20%)", // dark warm
+    br: "hsl(0, 0%, 98%)", // pure white
+    pk: "hsl(340, 30%, 85%)", // light pink accent
+    bl: "hsl(0, 0%, 20%)", // dark for eyes
+    wh: "hsl(0, 0%, 100%)", // bright white
+    or: "hsl(0, 0%, 95%)", // off-white
+    bn: "hsl(0, 0%, 97%)", // cream white
+    bk: "hsl(0, 0%, 25%)", // dark accent
   };
 
   const pattern = petPatterns[type];
