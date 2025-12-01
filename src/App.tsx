@@ -11,18 +11,15 @@ import Inventory from "@/pages/Inventory";
 import Tips from "@/pages/Tips";
 import Tracker from "@/pages/Tracker";
 import NotFound from "@/pages/NotFound";
-
 const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
+const App = () => <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
         <Navigation />
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Dashboard />} className="bg-[#f4e1e1]" />
           <Route path="/quests" element={<Quests />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/inventory" element={<Inventory />} />
@@ -32,7 +29,5 @@ const App = () => (
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
-  </QueryClientProvider>
-);
-
+  </QueryClientProvider>;
 export default App;
