@@ -102,8 +102,6 @@ Fully responsive across all devices with mobile-optimized navigation and layouts
 
 ## 🌟 Project URL
 
-**Lovable Project**: https://lovable.dev/projects/2cb415a0-e639-4e79-a6f2-74e1ba3127c3
-
 ## 📄 License
 
 This project is created with [Lovable](https://lovable.dev).
