@@ -90,7 +90,7 @@ const FinancePet = () => {
         <div className="relative">
           {/* Pixelated pet */}
           <div className="p-2 rounded-2xl bg-white/30 backdrop-blur-sm">
-            <PixelPet type={config.petType} size={14} />
+            <PixelPet type="bunny" size={14} />
           </div>
           
           {/* Mood indicator dots */}
