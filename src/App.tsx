@@ -19,7 +19,7 @@ const App = () => <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Navigation />
         <Routes>
-          <Route path="/" element={<Dashboard />} className="bg-[#f4e1e1]" />
+          <Route path="/" element={<Dashboard />} />
           <Route path="/quests" element={<Quests />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/inventory" element={<Inventory />} />
