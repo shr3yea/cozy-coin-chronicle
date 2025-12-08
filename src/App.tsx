@@ -10,9 +10,13 @@ import Shop from "@/pages/Shop";
 import Inventory from "@/pages/Inventory";
 import Tips from "@/pages/Tips";
 import Tracker from "@/pages/Tracker";
+import Auth from "@/pages/Auth";
 import NotFound from "@/pages/NotFound";
+
 const queryClient = new QueryClient();
-const App = () => <QueryClientProvider client={queryClient}>
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
@@ -25,9 +29,12 @@ const App = () => <QueryClientProvider client={queryClient}>
           <Route path="/inventory" element={<Inventory />} />
           <Route path="/tips" element={<Tips />} />
           <Route path="/tracker" element={<Tracker />} />
+          <Route path="/auth" element={<Auth />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
-  </QueryClientProvider>;
+  </QueryClientProvider>
+);
+
 export default App;
