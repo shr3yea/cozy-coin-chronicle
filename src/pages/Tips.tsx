@@ -1,4 +1,4 @@
-import { Lightbulb, PiggyBank, TrendingUp, Shield, Target } from "lucide-react";
+import { Lightbulb, PiggyBank, TrendingUp, Shield, Target, BookOpen, ExternalLink } from "lucide-react";
 
 const tips = [
   {
@@ -75,6 +75,45 @@ const tips = [
   },
 ];
 
+const blogs = [
+  {
+    title: "The Psychology of Saving Money",
+    description: "Understanding why we spend and how to rewire our brains for better financial habits.",
+    readTime: "5 min read",
+    category: "Mindset",
+  },
+  {
+    title: "How to Build Wealth on Any Income",
+    description: "Practical strategies for growing your net worth, regardless of your salary.",
+    readTime: "7 min read",
+    category: "Wealth Building",
+  },
+  {
+    title: "Budgeting for Beginners: A Complete Guide",
+    description: "Everything you need to know to create and stick to your first budget.",
+    readTime: "10 min read",
+    category: "Budgeting",
+  },
+  {
+    title: "Smart Grocery Shopping: Save Hundreds Monthly",
+    description: "Tips and tricks to cut your food bill without sacrificing quality or nutrition.",
+    readTime: "4 min read",
+    category: "Saving Tips",
+  },
+  {
+    title: "The Power of Compound Interest",
+    description: "Learn how small investments today can grow into significant wealth over time.",
+    readTime: "6 min read",
+    category: "Investing",
+  },
+  {
+    title: "Breaking Free from Lifestyle Inflation",
+    description: "How to avoid the trap of spending more as you earn more.",
+    readTime: "5 min read",
+    category: "Mindset",
+  },
+];
+
 const Tips = () => {
   return (
     <div className="min-h-screen pt-20 pb-24 md:pt-24 px-4">
@@ -109,6 +148,40 @@ const Tips = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Blogs Section */}
+        <div className="mt-12">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="p-3 rounded-full ghibli-gradient-lavender">
+              <BookOpen className="w-6 h-6 text-primary-foreground" />
+            </div>
+            <h2 className="text-2xl font-bold">Money Blogs</h2>
+          </div>
+          
+          <div className="grid gap-4 md:grid-cols-2">
+            {blogs.map((blog, index) => (
+              <div 
+                key={index}
+                className="cloud-card p-5 hover:shadow-lg transition-shadow cursor-pointer group"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex-1">
+                    <span className="inline-block px-2 py-1 text-xs rounded-full bg-primary/10 text-primary mb-2">
+                      {blog.category}
+                    </span>
+                    <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                      {blog.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-3">{blog.description}</p>
+                    <span className="text-xs text-muted-foreground">{blog.readTime}</span>
+                  </div>
+                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="cloud-card p-8 text-center mt-8">
